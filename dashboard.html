@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Mon Dashboard</h2>
+            <nav>
+                <ul>
+                    <li><a href="Acceuil.html">Accueil</a></li>
+                    <li><a href="systemHumainVersOcean.html">le sytéme humains vers le systéme oceanique</a></li>
+                    <li><a href="#">le systéme oceanique vers le sytéme humains</a> </li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Paramètres</a></li>
+                    <li><a href="login.html">Déconnexion</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Bienvenue dans votre tableau de bord</h1>
+            </header>
+            <section class="widgets">
+                <div class="widget">
+                    <h3>Utilisateurs actifs</h3>
+                    <p class="statistic">125</p>
+                </div>
+                <div class="widget">
+                    <h3>Requêtes traitées</h3>
+                    <p class="statistic">320</p>
+                </div>
+                <div class="widget">
+                    <h3>Impact écologique</h3>
+                    <p class="statistic">75% 🌿</p>
+                </div>
+                <div class="widget">
+                    <h3>Notifications</h3>
+                    <p class="statistic">Aucune nouvelle notification</p>
+                </div>
+            </section>
+            <section class="charts">
+                <div class="chart">
+                    <h3>Statistiques des utilisateurs</h3>
+                    <!-- Vous pouvez utiliser un graphique ici, par exemple avec Chart.js -->
+                    <canvas id="userChart"></canvas>
+                </div>
+                <div class="chart">
+                    <h3>Impact écologique sur les 30 derniers jours</h3>
+                    <!-- Graphique pour l'impact écologique -->
+                    <canvas id="ecoChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <!-- Chart.js pour les graphiques -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Exemple d'initialisation d'un graphique avec Chart.js
+        var ctx1 = document.getElementById('userChart').getContext('2d');
+        var userChart = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [{
+                    label: 'Utilisateurs Actifs',
+                    data: [120, 150, 180, 220, 250],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            }
+        });
+
+        var ctx2 = document.getElementById('ecoChart').getContext('2d');
+        var ecoChart = new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['1', '5', '10', '15', '20', '25', '30'],
+                datasets: [{
+                    label: 'Impact écologique',
+                    data: [60, 65, 70, 72, 75, 78, 80],
+                    fill: false,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    tension: 0.1
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

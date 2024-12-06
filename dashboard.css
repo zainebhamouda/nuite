@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;  /* Disposition verticale de tous les éléments */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #004466;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Modification pour afficher la navigation horizontalement */
+/* Styles pour la sidebar */
+.sidebar {
+    background-color: #004466;
+    color: white;
+    padding: 20px;
+    display: row-reverse;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style général de la sidebar */
+.sidebar {
+    background-color: #004466; /* Couleur de fond de la sidebar */
+    color: white;              /* Couleur du texte */
+    padding-left: 20px;        /* Espacement à gauche pour éviter que le texte soit trop collé */
+    padding-right: 20px;       /* Espacement à droite */
+    padding-top: 30px;         /* Espacement supérieur pour un alignement propre */
+    height: 25vh;              /* La sidebar occupe 25% de la hauteur de la fenêtre */
+    width: 100%;               /* La sidebar prend toute la largeur de la page */
+    position: fixed;           /* Fixer la sidebar sur le côté supérieur de l'écran */
+    top: 0;                    /* La sidebar commence en haut de la page */
+    left: 0;                   /* La sidebar s'étend sur toute la largeur */
+    display: flex;             /* Utilisation de flexbox pour l'alignement du contenu */
+    flex-direction: column;    /* Les éléments dans la sidebar seront disposés verticalement */
+    align-items: flex-start;   /* Alignement des éléments au début de la sidebar */
+    justify-content: flex-start; /* Alignement des éléments en haut de la sidebar */
+    box-sizing: border-box;    /* Inclure padding et bordures dans la largeur/hauteur totale */
+    z-index: 10;                 /* Assurer que la sidebar reste au-dessus du contenu */
+}
+
+
+
+/* Titre de la sidebar */
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Style pour la liste de navigation */
+.sidebar nav ul {
+    list-style-type: none;  /* Supprime les puces de la liste */
+    padding: 0;  /* Enlève le padding par défaut */
+    margin: 0;   /* Enlève la marge par défaut */
+    display: flex;  /* Aligne les éléments horizontalement */
+    justify-content: space-between;  /* Espace égal entre les éléments */
+    width: 100%;  /* Fait en sorte que la liste occupe toute la largeur disponible */
+}
+
+.sidebar nav ul li {
+    margin: 0;
+}
+
+/* Style des liens de navigation */
+.sidebar nav ul li a {
+    text-decoration: none;  /* Enlève le soulignement des liens */
+    color: white;  /* Couleur du texte */
+    font-size: 1em;  /* Taille de la police */
+    padding: 10px 20px;  /* Padding autour des liens pour les rendre plus grands */
+    border-radius: 5px;  /* Coins arrondis */
+    transition: background-color 0.3s;  /* Transition douce pour le changement de couleur */
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #0077aa;  /* Changer la couleur de fond lors du survol */
+}
+
+
+
+
+
+
+
+
+/* Style global du conteneur principal */
+.container {
+    display: flex;             /* Utilisation de flexbox pour disposer sidebar et widgets */
+    flex-direction: column;    /* Positionner les éléments verticalement */
+    align-items: center;       /* Centrer les éléments horizontalement */
+    width: 100%;               /* La largeur du conteneur prend toute la page */
+}
+
+/* Style général de la sidebar */
+.sidebar {
+    background-color: #004466;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    height: 25vh;              /* Sidebar prend 25% de la hauteur de la fenêtre */
+    width: 100%;
+    position: fixed;           /* La sidebar reste fixe en haut */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+/* Section principale (main-content) */
+.main-content {
+    margin-top: 25vh;  /* Laisser un espace pour la sidebar */
+    padding: 20px;
+    background-color: #f9f9f9;
+    flex-grow: 1;  /* Permet à la section de grandir pour occuper le reste de l'espace */
+    width: 100%;
+    display: flex;
+    justify-content: center;  /* Centrer le contenu horizontalement */
+    align-items: center;  /* Centrer le contenu verticalement */
+    flex-direction: column;
+}
+
+
+/* Style du header dans la section principale */
+.main-content header h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Style de la section des widgets */
+.widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Grille réactive */
+    gap: 20x;  /* Ajout d'un espacement entre les widgets */
+    justify-items: center; /* Centrer les widgets horizontalement */
+    margin-top: 20px;  /* Espacement supplémentaire en haut de la section des widgets */
+    margin-bottom: 20px;  /* Espacement supplémentaire en bas de la section des widgets */
+}
+
+/* Style de chaque widget */
+.widget {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Assure que chaque widget occupe toute la largeur possible de la cellule */
+    margin: 5px 60px;  /* Ajout d'espacement vertical entre chaque widget */
+}
+
+/* Style des titres dans les widgets */
+.widget h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Style des textes dans les widgets */
+.widget p {
+    font-size: 2em;
+    color: #004466;
+}

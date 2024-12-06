@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallèles Humains et Océaniques</title>
+    <link rel="stylesheet" href="systemHumainVersOcean.css">
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <h1>Explorer les Parallèles entre le Corps Humain et le Système Océanique</h1>
+        <p>Cliquez sur les parties du corps humain pour explorer les similitudes avec l'océan.</p>
+    </header>
+
+    <!-- Section de l'image du corps humain avec zones cliquables -->
+    <section id="human-body">
+        <img src="5.png" alt="Anatomie du corps humain" usemap="#bodymap" />
+        <map name="bodymap">
+            <area shape="rect" coords="50,120,150,220" alt="Cœur" href="javascript:void(0);" onclick="showOceanEcho('heart')" />
+            <area shape="rect" coords="100,200,190,310" alt="Poumons" href="javascript:void(0);" onclick="showOceanEcho('lungs')" />
+            <area shape="rect" coords="120,390,200,450" alt="Estomac" href="javascript:void(0);" onclick="showOceanEcho('stomach')" />
+            <area shape="rect" coords="100,10,200,120" alt="rein" href="javascript:void(0);" onclick="showOceanEcho('brain')" />
+        </map>
+    </section>
+
+    <!-- Section de la carte avec flèche -->
+    <section id="ocean-echo">
+        <h2>Écho dans le Système Océanique</h2>
+        <div id="ocean-map-container" class="hidden">
+            <div class="ocean-map-right">
+                <p id="ocean-description"></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Application éducative - Explorez le lien entre l'homme et l'océan</p>
+    </footer>
+
+    <script src="systemHumainVersOcean.js"></script>
+</body>
+</html>
